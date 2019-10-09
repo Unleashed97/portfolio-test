@@ -1,0 +1,79 @@
+// out: ../css/main.css, sourcemap: true, compress: true
+
+@import "vars.less";
+
+html
+{
+  font-size: 10px;
+}
+body
+{
+  font-size: 1rem;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+
+  &.no-scroll
+  {
+    overflow: hidden;
+  }
+}
+h1, h2, h3, h4, h5, h6
+{
+  margin: 0;
+}
+
+p
+{
+  margin: 0 0 15px;
+}
+
+*, *:before, *:after
+{
+  box-sizing: border-box;
+}
+
+// BLOCKS
+@import "components/header.less";
+@import "components/container.less";
+@import "components/user.less";
+@import "components/nav.less";
+@import "components/intro.less";
+@import "components/social.less";
+@import "components/btn.less";
+@import "components/works.less";
+@import "components/portfolio.less";
+@import "components/work.less";
+@import "components/about.less";
+@import "components/reviews.less";
+@import "components/news.less";
+@import "components/articles.less";
+@import "components/footer.less";
+@import "components/modal.less";
+@import "components/modal-work.less";
+@import "components/timeline.less";
+@import "components/progress-bar.less";
+@import "components/contact.less";
+@import "components/form.less";
+
+
+// HELPERS
+.text-center
+{
+  text-align: center;
+}
+
+.text-right
+{
+  text-align: right;
+}
+.img
+{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.mb-0
+{
+  margin-bottom: 0;
+}

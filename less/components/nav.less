@@ -1,0 +1,53 @@
+//main: ../styles.less
+.nav
+{
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.nav__link
+{
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 15px;
+  margin-left: 50px;
+
+  &:after
+  {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    z-index: 2;
+    transition: width ease-in-out .2s;
+  }
+
+  &:hover:not(.nav__link--btn)
+  {
+    &:after
+    {
+      width: 100%;
+    }
+  }
+
+// modificators
+  &--btn
+  {
+    padding: 10px 30px;
+    border: 2px solid black;
+    border-radius: 20px;
+    transition: background-color .2s linear, color .2s linear;
+    &:hover
+    {
+      background-color: black;
+      color: white;
+    }
+  }
+}

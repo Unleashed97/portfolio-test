@@ -1,0 +1,80 @@
+// main: ../styles.less
+.timeline
+{
+  display: flex;
+  margin: 60px auto;
+  width: 100%;
+  max-width: 770px;
+  color: black;
+
+  position: relative;
+  &:before
+  {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 1;
+  }
+}
+.timeline__col
+{
+  width: 50%;
+
+  &--left
+  {
+    text-align: right;
+    padding-right: 48px;
+  }
+
+  &--right
+  {
+    text-align: left;
+    padding-left: 48px;
+  }
+}
+.timeline__title
+{
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.timeline__item
+{
+  margin-bottom: 40px;
+  &:last-child
+  {
+    margin-bottom: 0;
+  }
+}
+.timeline__date
+{
+  display: block;
+  color: black;
+  text-decoration: underline;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.timeline__subtitle
+{
+  font-size: 16px;
+  font-weight: 700;
+}
+.timeline__position
+{
+  font-size: 14px;
+  font-style: italic;
+}
+.timeline__text
+{
+  margin-top: 10px;
+  font-size: 12px;
+  color: #6a696b;
+  font-weight: 300;
+  line-height: 1.5;
+}
