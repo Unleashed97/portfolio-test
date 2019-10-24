@@ -1,43 +1,29 @@
-// let welcome = function()
-// {
-//   alert('welcome to my website');
-// }
-// welcome();
+let filter = document.getElementById('menu');
+let content = document.querySelectorAll('[data-cat]');
+filter.onclick = function(event)
+{
+  let target = event.target;
+  event.preventDefault();
+  if(target.getAttribute('data-filter'))
+  {
+    let cat = target.getAttribute('data-filter');
 
-
-//возвр все елементы
-  // let app = document.querySelectorAll('[data-filter]');
-  //
-  // for(let i=0; i<app.length; i++)
-  // {
-  //   app[i].addEventListener('click', funcClick);
-  //
-  // }
-  // function funcClick(event)
-  // {
-  //   // event.preventDefault();
-  //   for(let i=0; i<app.length; i++)
-  //   {
-  //     console.log(app[i].getAttribute('data-filter'));
-  //   }
-  // }
-  // funcClick();
-
-  // let app = document.querySelectorAll("[data-filter='app']");
-
-
-// возвр Node list
-  // let app = document.querySelectorAll('a[data-filter]');
-  //
-  // for(let i=0; i<app.length; i++)
-  // {
-  //   app[i].addEventListener('click', funcClick);
-  //
-  // }
-  // function funcClick(e)
-  // {
-  //   // e.preventDefault();
-  //   console.log(app);
-  //
-  // }
-  // funcClick();
+    for(let i=0; i<content.length; i++)
+    {
+      let catContent = content[i].getAttribute('data-cat');
+      if(catContent != cat)
+      {
+        content[i].classList.add('hide');
+      }
+      else content[i].classList.remove('hide');
+    }
+    
+    if(cat == 'all')
+    {
+      for(let i=0; i<content.length; i++)
+      {
+        content[i].classList.remove('hide');
+      }
+    }
+  }
+}

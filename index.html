@@ -28,7 +28,7 @@
             <a class="nav__link" href="#">about me</a>
             <a class="nav__link" href="#">blog</a>
             <a class="nav__link" href="#">contact</a>
-            <a class="nav__link nav__link--btn" href="#">hire me</a>
+            <a class="nav__link nav__link--btn" href="#" data-modal="modal_feedback">hire me</a>
         </nav>
       </div>
     </div>
@@ -48,8 +48,8 @@
             <a class="social__link" href="#"><img src="images/instagram.svg" alt=""></a>
             <a class="social__link" href="#"><img src="images/linkedin.svg" alt=""></a>
           </div>
-          <a class="btn" href="#">Hire me</a>
-          <button class="btn" type="button">See my resume</button>
+          <a class="btn" href="#" data-modal="modal_feedback">Hire me</a>
+          <button class="btn" type="button" data-modal="modal_resume">See my resume</button>
         </div>
         <img class="intro__photo" src="images/photo.png" alt="">
       </div>
@@ -57,16 +57,18 @@
   </section>
 
 <!-- Works -->
+
+
  <div class="works">
    <div class="container">
-     <div class="works__nav">
+     <div id="menu" class="works__nav">
        <a class="works__nav-link" href="#" data-filter="all">All</a>
        <a class="works__nav-link" href="#" data-filter="app">App</a>
        <a class="works__nav-link" href="#" data-filter="website">Website</a>
        <a class="works__nav-link" href="#" data-filter="interaction">Interaction</a>
      </div>
      <div class="portfolio">
-       <div class="portfolio__col" data-cat="app">
+       <div class="portfolio__col" data-cat="app" data-modal="modal_projects">
          <div class="work">
            <img class="work__image" src="https://placehold.it/370x300" alt="">
              <div class="work__content">
@@ -159,8 +161,8 @@
            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia vel magni est, aspernatur minus. Vitae nulla rem accusamus distinctio maxime, corporis sapiente facilis totam cumque quam ratione perspiciatis sequi officia.</p>
            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia vel magni est, aspernatur minus. Vitae nulla rem accusamus distinctio maxime, corporis sapiente facilis totam cumque quam ratione perspiciatis sequi officia.</p>
          </div>
-         <a class="btn" href="#">Hire me</a>
-         <button class="btn" type="button">See my resume</button>
+         <a class="btn" href="#" data-modal="modal_feedback">Hire me</a>
+         <button class="btn" type="button" data-modal="modal_resume">See my resume</button>
        </div>
      </div>
    </div>
@@ -302,17 +304,16 @@
          <a class="footer__nav-link" href="#">About me</a>
          <a class="footer__nav-link" href="#">Blog</a>
          <a class="footer__nav-link" href="#">Contact</a>
-         <a class="footer__nav-link footer__nav-link--btn" href="#">Hire me</a>
+         <a class="footer__nav-link footer__nav-link--btn" href="#" data-modal="modal_feedback">Hire me</a>
        </nav>
      </div>
    </div>
  </footer>
 
- <!-- Modals -->
- <div class="modal" style="display: none">
+ <!-- Modals projects-->
+ <div id="modal_projects" class="modal">
    <div class="modal__dialog">
-
-     <button class="modal__close" type="button">
+     <button class="modal__close" type="button" data-close="">
        <img src="images/modal-close.svg" alt="Close">
      </button>
      <div class="modal-work">
@@ -350,10 +351,10 @@
  </div>
 
 <!-- modal Resume -->
- <div class="modal" style="display: none">
+ <div id="modal_resume" class="modal">
    <div class="modal__dialog">
 
-     <button class="modal__close" type="button">
+     <button class="modal__close" type="button" data-close="">
        <img src="images/modal-close.svg" alt="Close">
      </button>
 
@@ -472,9 +473,9 @@
  </div>
 
  <!-- modal feedback -->
-<div class="modal" style="display: none">
+<div id="modal_feedback" class="modal">
   <div class="modal__dialog modal__dialog--sm ">
-    <button class="modal__close" type="button">
+    <button class="modal__close" type="button" data-close="">
       <img src="images/modal-close.svg" alt="Close">
     </button>
       <div class="contact">
@@ -513,5 +514,6 @@
 
 <!-- JS -->
 <script src="js/filter-works.js"></script>
+<script src="js/modals.js"></script>
 </body>
 </html>
