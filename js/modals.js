@@ -17,6 +17,8 @@ for(let i=0; i<modalCall.length; i++)
     {
       document.getElementById(modalName).getElementsByClassName("modal__dialog")[0].style.transform='translateY(0)';
     }, 100);
+
+    $('#worksSlider').slick('setPosition');
   });
 }
 
