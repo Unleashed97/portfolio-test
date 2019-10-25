@@ -10,6 +10,15 @@
 {
   width: 33.3333%;
   padding: 15px 30px;
+
+  @media @mobile
+  {
+    width: 50%;
+  }
+  @media @mobile-sm
+  {
+    width: 100%;
+  }
 }
 
 .articles__item
@@ -78,4 +87,9 @@
   font-weight: 300;
   line-height: 1.8;
   margin-bottom: 30px;
+
+  @media @mobile
+  {
+    margin-bottom: 10px;
+  }
 }

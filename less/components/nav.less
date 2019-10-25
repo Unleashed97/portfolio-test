@@ -4,6 +4,11 @@
   display: flex;
   height: 100%;
   align-items: center;
+
+  @media @mobile
+  {
+    display: none;
+  }
 }
 
 .nav__link
@@ -14,8 +19,12 @@
   color: black;
   font-weight: 600;
   font-size: 15px;
-  margin-left: 50px;
+  margin-left: 35px;
 
+  &:first-child
+  {
+    margin-left: 0;
+  }
   &:after
   {
     content: "";

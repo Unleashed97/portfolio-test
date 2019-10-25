@@ -5,11 +5,11 @@
   vertical-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 15px;
   font-family: inherit;
   border: 1px solid gray;
   border-radius: 30px;
-  padding: 1.5rem 1.8rem;
+  padding: 15px 18px;
   background: none;
   color: black;
   line-height: 1;
@@ -28,6 +28,11 @@
   + .btn
   {
     margin-left: 40px;
+
+    @media @tablet
+    {
+      margin-left: 10px;
+    }
   }
   // modificators
 
@@ -46,5 +51,12 @@
     font-size: 14px;
     padding: 10px 15px;
     min-width: 140px;
+  }
+
+  @media @tablet
+  {
+    font-size: 12px;
+    min-width: 120px;
+    padding: 10px 12px;
   }
 }
