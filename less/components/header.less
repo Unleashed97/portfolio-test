@@ -2,11 +2,22 @@
 
 .header
 {
-  padding-top: 20px;
+  position: relative;
+
+  @media @mobile
+  {
+    background-color: #fff;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
 }
 .header__inner
 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 5px 0;
 }

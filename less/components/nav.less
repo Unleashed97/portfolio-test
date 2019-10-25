@@ -2,15 +2,43 @@
 .nav
 {
   display: flex;
+  flex-wrap: wrap;
   height: 100%;
   align-items: center;
 
   @media @mobile
   {
+    width: 100%;
+    height: calc(100vh-5px);
+    padding: 15px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+
     display: none;
+
+    &.show
+    {
+      display: flex;
+    }
   }
 }
 
+.nav__wrapper
+{
+
+  @media @mobile
+  {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+  }
+}
 .nav__link
 {
   position: relative;
@@ -57,6 +85,18 @@
     {
       background-color: black;
       color: white;
+    }
+  }
+
+  @media @mobile
+  {
+    width: 100%;
+    margin-left: 0;
+    padding: 10px 15px;
+
+    &:first-child
+    {
+      margin-left: 0;
     }
   }
 }

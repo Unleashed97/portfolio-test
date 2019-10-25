@@ -41,17 +41,28 @@
   padding-right: 10px;
   margin-right: 10px;
   border-right: 1px solid fade(#6a696b, 35%);
+
   @media @mobile-sm
   {
+    width: 100%;
     border: 0;
     margin: 0;
     padding: 0;
     margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 .footer__social
 {
+  display: flex;
+
+  @media @mobile-sm
+  {
+    justify-content: center;
+    align-items: center;
+  }
   a
   {
     margin: 0 5px;
