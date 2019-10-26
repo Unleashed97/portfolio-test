@@ -13,9 +13,21 @@
 {
   width: 60px;
   height: 60px;
+
+  @media @mobile
+  {
+    width: 50px;
+    height: 50px;
+  }
+
   img
   {
     border-radius: 50%;
+    @media @mobile
+    {
+      width: 50px;
+      height: 50px;
+    }
   }
 }
 
@@ -23,10 +35,20 @@
 {
   font-size: 17px;
   font-weight: 700;
+
+  @media @mobile
+  {
+    font-size: 14px;
+  }
 }
 
 .user__prof
 {
   font-size: 15px;
   color: fade(gray, 60%);
+
+  @media @mobile
+  {
+    font-size: 12px;
+  }
 }

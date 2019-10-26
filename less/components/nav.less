@@ -9,17 +9,16 @@
   @media @mobile
   {
     width: 100%;
-    height: calc(100vh-5px);
+    height: 100vh;
     padding: 15px;
     position: absolute;
     top: 100%;
     right: 0;
     z-index: 1000;
-    width: 100%;
     background-color: #fff;
     text-align: center;
-
     display: none;
+
 
     &.show
     {
@@ -37,6 +36,7 @@
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
+    justify-content: center;
   }
 }
 .nav__link
@@ -102,6 +102,11 @@
     &:first-child
     {
       margin-left: 0;
+    }
+
+    &--btn
+    {
+      width: 150px;
     }
   }
 }

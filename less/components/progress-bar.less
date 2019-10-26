@@ -1,4 +1,5 @@
 // main: ../styles.less
+
 .progress-bar
 {
   margin-bottom: 40px;
@@ -6,6 +7,7 @@
 .progress-bar__item
 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
@@ -14,11 +16,18 @@
 }
 .progress-bar__left
 {
-
+  @media @mobile-sm
+  {
+    width: 100%;
+  }
 }
 .progress-bar__right
 {
-  padding-left: 15px;
+  // padding-left: 15px;
+  @media @mobile-sm
+  {
+    width: 100%;
+  }
 }
 .progress-bar__title
 {
@@ -27,10 +36,14 @@
 }
 .progress-bar__bar
 {
-
   width: 140px;
   height: 6px;
   background-color: #efefef;
+
+  @media @mobile
+  {
+    width: 100px;
+  }
 }
 .progress-bar__progress
 {

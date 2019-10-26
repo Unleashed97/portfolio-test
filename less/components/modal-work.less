@@ -1,29 +1,71 @@
 // main: ../styles.less
+
 .modal-work
 {
   display: flex;
+  flex-wrap: wrap;
+
 }
 .modal-work__preview
 {
   width: 65%;
   position: relative;
   overflow: hidden;
+
+  @media @tablet
+  {
+    width: 100%;
+  }
 }
 .modal-work__photo
 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  // max-height: 780px;
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // z-index: 1;
+  //
+  // transform: translate3d(-50%, -50%, 0);
 
-  transform: translate3d(-50%, -50%, 0);
+  @media @tablet
+  {
+    content: url("http://placehold.it/790x780");
+  }
+
+  @media @mobile
+  {
+    content: url("http://placehold.it/710x720");
+  }
+  @media @mobile-sm
+  {
+    content: url("http://placehold.it/390x400");
+  }
 }
 .modal-work__content
 {
+  display: flex;
+	flex-direction: column;
+	min-height: 100%;
+
   width: 35%;
   padding: 50px 100px 15px 25px;
   position: relative;
+
+  @media @tablet
+  {
+    width: 100%;
+    padding: 15px;
+  }
 }
+
+.modal-work__main
+{
+  flex: 1 0 auto;
+}
+
 .modal-work__header
 {
   margin-bottom: 30px;
@@ -71,18 +113,25 @@
   font-weight: 300;
   line-height: 2;
   color: #6a696b;
-  margin-bottom: 120px;
+
+  // fixed with footer (modal-work__footer pinned to bottom)
+  // margin-bottom: 120px;
 }
 
 .modal-work__footer
 {
   display: flex;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  flex: 0 0 auto;
   justify-content: space-between;
-  padding: 20px 30px;
+  width: 100%;
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+
+  @media @tablet
+  {
+
+  }
 }
 .modal-work__btn
 {
