@@ -13,7 +13,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @media @mobile
+  @media @tablet
   {
     justify-content: center;
   }
@@ -34,6 +34,8 @@
 .footer__copyright
 {
   display: flex;
+  height: 25px;
+  line-height: 25px;
   color: #bbbbcc;
   font-size: 14px;
   font-weight: 300;
@@ -48,7 +50,7 @@
     border: 0;
     margin: 0;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     justify-content: center;
     align-items: center;
   }
@@ -57,16 +59,31 @@
 .footer__social
 {
   display: flex;
+  height: 25px;
+  border-right: 1px solid fade(#6a696b, 35%);
+  padding-right: 10px;
+  margin-right: 10px;
 
-  @media @mobile-sm
+  img
   {
-    justify-content: center;
-    align-items: center;
+    width: 25px;
+    height: 25px;
   }
   a
   {
     margin: 0 5px;
     text-decoration: none;
+  }
+
+  @media @mobile-sm
+  {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+    border: 0;
   }
 }
 
@@ -75,7 +92,8 @@
   display: flex;
   height: 100%;
   align-items: center;
-  @media @mobile
+
+  @media @tablet
   {
     display: none;
   }

@@ -1,0 +1,51 @@
+//main: ../styles.less
+
+.footer-lang
+{
+  display: flex;
+  padding: 0 5px;
+
+}
+
+.footer-lang__main
+{
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 14px;
+  color: #bbbbcc;
+  height: 25px;
+  line-height: 25px;
+  cursor: pointer;
+
+  position: relative;
+}
+.footer-lang__icon
+{
+  width: 25px;
+  height: 25px;
+}
+.footer-lang__text
+{
+  margin-left: 5px;
+}
+
+.footer-lang__dropdown
+{
+  display: none;
+  font-size: 14px;
+  color: #bbbbcc;
+  height: 25px;
+  line-height: 25px;
+  cursor: pointer;
+
+  position: absolute;
+  top: -43px;
+  left: -5px;
+  background-color: #2b2a2c;
+  padding: 5px;
+
+  &.show
+  {
+    display: flex;
+  }
+}
